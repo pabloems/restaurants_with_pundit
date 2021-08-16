@@ -27,11 +27,10 @@ class RestaurantsController < ApplicationController
 
     authorize @restaurant
 
-      if @restaurant.save
-        redirect_to @restaurant #Short cut de restaurant_path(@restaurant)
-      else
-        render :new
-      end
+    if @restaurant.save
+      redirect_to @restaurant #Short cut de restaurant_path(@restaurant)
+    else
+      render :new
     end
   end
 
@@ -61,4 +60,4 @@ class RestaurantsController < ApplicationController
     def restaurant_params
       params.require(:restaurant).permit(:name)
     end
-
+end
