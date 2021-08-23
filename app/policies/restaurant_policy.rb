@@ -4,7 +4,7 @@ class RestaurantPolicy < ApplicationPolicy
       scope.all # Ayuda a modificar lo que se ve en vistas ej: scope.where(user: user)
     end
   end
-  
+
   def show?
     return true
   end
